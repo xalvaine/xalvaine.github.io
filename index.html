@@ -190,10 +190,10 @@
         </div>
     </div>
 </div>
-
-
-<!--About section-->
-
-
+<script>
+    f = () => document.querySelector(`.full-screen-height`).style.height = `${window.innerHeight}px`;
+    f();
+    window.addEventListener(`resize`, f);
+</script>
 </body>
 </html>
