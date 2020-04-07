@@ -55,7 +55,8 @@
 
 a {
     color: var(--light);
-    text-decoration: underline dashed;
+    -webkit-text-decoration: underline dashed;
+            text-decoration: underline dashed;
 }
 
 html {
@@ -78,9 +79,15 @@ body {
 
 .header {
     padding-top: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .header__navigation {
@@ -89,11 +96,18 @@ body {
     position: fixed;
     width: 100%;
     text-align: center;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     height: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding-bottom: 2px;
     z-index: 1;
 }
@@ -117,7 +131,9 @@ body {
 .intro {
     font-family: 'Outage', sans-serif;
     position: relative;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     background: url("../img/intro_box.png") 50% 50% no-repeat var(--green);
     background-size: contain;
 }
@@ -137,8 +153,12 @@ body {
     position: absolute;
     bottom: 50px;
     height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0 20px;
     background: var(--darkGreen);
     color: var(--light);
@@ -147,6 +167,8 @@ body {
     margin: auto;
     left: 0;
     right: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -163,10 +185,13 @@ body {
 }
 
 .selection__cards {
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, 215px);
     justify-items: center;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
     padding-bottom: 15px;
 }
@@ -194,9 +219,14 @@ body {
 }
 
 .message__fonts {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
@@ -206,9 +236,15 @@ body {
     font-size: 30px;
     width: 172px;
     height: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .message__link:hover {
@@ -233,11 +269,17 @@ body {
     text-decoration: none;
     bottom: 50px;
     height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0 20px;
     border-radius: 25px;
     margin: 0 auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -271,11 +313,16 @@ body {
 }
 
 .footer__text {
+    display: -ms-grid;
     display: grid;
     grid-auto-flow: column;
     grid-gap: 10px;
-    justify-content: start;
-    align-items: start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
     letter-spacing: 0.05em;
     margin-bottom: 10px;
 }
@@ -285,7 +332,9 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -ms-grid;
     display: grid;
     grid-gap: 20px;
 }
