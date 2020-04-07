@@ -193,6 +193,7 @@
 <script>
     f = () => document.querySelector(`.full-screen-height`).style.minHeight = `${window.innerHeight}px`;
     f();
+    document.addEventListener(`load`, f);
     window.addEventListener(`resize`, f);
 </script>
 </body>
