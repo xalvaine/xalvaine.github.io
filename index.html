@@ -191,7 +191,7 @@
     </div>
 </div>
 <script>
-    f = () => document.querySelector(`.full-screen-height`).style.height = `${window.innerHeight}px`;
+    f = () => document.querySelector(`.full-screen-height`).style.minHeight = `${window.innerHeight}px`;
     f();
     window.addEventListener(`resize`, f);
 </script>
