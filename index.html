@@ -1,12 +1,199 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>EcoHack</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <link rel="apple-touch-icon" href="http://kudobox.co/iphone_icon.png"/>
+    <title>Kudobox</title>
+    <meta name="title" content="Kudobox"/>
+    <meta name="description"
+          content="An easy and fun way to share your appreciations and emotions with friends and colleagues"/>
+    <meta property="og:title" content="Kudobox"/>
+    <meta property="og:description"
+          content="An easy and fun way to share your appreciations and emotions with friends and colleagues"/>
+    <meta property="og:image" content="http://kudobox.co/kudobox.png"/>
+    <meta content="authenticity_token" name="csrf-param"/>
+    <meta content="vmIQBOWY3SUyILkpjCuFJiHUB8Gl7kcYOgsZf/8inZ4=" name="csrf-token"/>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<noscript>You need to enable JavaScript to run this app.</noscript>
-<main class="root"></main>
+<header class="header full-screen-height">
+    <nav class="header__navigation">
+        <ul>
+            <li>
+                <a href="#" class="header__link">Login with twitter</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="intro container">
+        <h1 class="intro__title">Kudobox</h1>
+        <p class="intro__text">is an easy way to share your thanks</p>
+        <a class="intro__button" href="#create">Create kudo</a>
+    </section>
+</header>
+<main>
+    <section id="create" class="selection full-screen-height container">
+        <h2 class="selection__title">Choose a card to begin with</h2>
+        <div class="selection__cards">
+            <a href="#" data-image-id="1">
+                <img alt="Choose a card" src="img/cards/small/1.jpg" title="Choose a card" class="selection__image"/>
+            </a>
+            <a href="#" data-image-id="2">
+                <img alt="Choose a card" src="img/cards/small/2.jpg" title="Choose a card" class="selection__image"/>
+            </a>
+            <a href="#" data-image-id="3">
+                <img alt="Choose a card" src="img/cards/small/3.jpg" title="Choose a card" class="selection__image"/>
+            </a>
+            <a href="#" data-image-id="4">
+                <img alt="Choose a card" src="img/cards/small/4.jpg" title="Choose a card" class="selection__image"/>
+            </a>
+            <a href="#" data-image-id="5">
+                <img alt="Choose a card" src="img/cards/small/5.jpg" title="Choose a card" class="selection__image"/>
+            </a>
+            <a href="#" data-image-id="6">
+                <img alt="Choose a card" src="img/cards/small/6.jpg" title="Choose a card" class="selection__image"/>
+            </a>
+            <a href="#" data-image-id="7">
+                <img alt="Choose a card" src="img/cards/small/7.jpg" title="Choose a card" class="selection__image"/>
+            </a>
+        </div>
+    </section>
+    <section class="message container full-screen-height">
+        <h2 class="message__title">Type your thanks message</h2>
+        <div class="message__fonts">
+            <a href="#" data-font-id="4" class="message__link message__link--festus">Kudobox</a>
+            <a href="#" data-font-id="5" class="message__link message__link--marckscript">Kudobox</a>
+            <a href="#" data-font-id="6" class="message__link message__link--handyboldcyr">Kudobox</a>
+        </div>
+
+        <div id="kudo_img_builder">
+            <div class="kudo_preloader">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+        </div>
+        <a id="sendButton" href="#" class="message__button">Share my kudo</a>
+    </section>
+</main>
+<footer class="footer full-screen-height container">
+    <h2 class="footer__title">Explore Kudobox</h2>
+    <p class="footer__text">
+        Follow us on:
+        <a class="footer__link footer__link--twitter" href="http://twitter.com/kudobox" target="_blank"></a>
+        <a class="footer__link footer__link--facebook" href="#" target="_blank"></a>
+    </p>
+    <p class="footer__text">
+        Email us at
+        <a class="" href="mailto:skotlov@gmail.com">skotlov@gmail.com</a>
+    </p>
+    <p class="footer__text">
+        Our
+        <a href="api">API</a>
+    </p>
+    <p class="footer__text">
+        Our
+        <a href="about/privacy">privacy policy</a>
+    </p>
+    <div class="footer__bottom-content container">
+        <a class="footer__graphic-link" href="http://happymelly.com" target="_blank" title="Happy Melly">
+            <img class="footer__graphic-link-image" src="img/happymel.png" alt="">
+        </a>
+        <a href="http://management30.com" target="_blank" title="Management 3.0">
+            <img class="footer__graphic-link-image" src="img/logo.png" alt=""/>
+        </a>
+    </div>
+</footer>
+
+<div class="modal fade" id="copyModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog kudo_popup">
+        <div class="copy_link_box">
+            <input onclick="this.focus(); this.select();" class="copy-link hidden" type="text" value=""/>
+            <div class="kudo_preloader">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+        </div>
+        <div class="text">
+            <a class="kudo_btn">Done</a>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog kudo_popup">
+        <div class="content">
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="shareModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog kudo_popup">
+        <div class="notification">
+            Copy a link or share your kudo on twitter from here:
+        </div>
+        <div class="content_popup">
+            <div class="textarea_box">
+                <textarea data-initial-message="My #kudo to " maxlength="90">My #kudo to </textarea>
+                <span class="counter"><i></i> symbols left</span>
+            </div>
+            <div class="text">
+                <!-- <a id="loginModalButton" class="kudo_btn pull-center" style="width: 57%;">Login with twitter to share</a> -->
+                <a class="kudo_btn copy-form" id="shareFromCopyLink" href="#">Copy a link</a>
+            </div>
+        </div>
+        <div class="failed_content hidden"></div>
+    </div>
+</div>
+
+<div class="modal fade" id="successfulShareModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog kudo_popup">
+        <div class="copy_link_box hidden">
+            <input onclick="this.focus(); this.select();" class="copy-link hidden" type="text" value=""/>
+            <div class="kudo_preloader">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+        </div>
+        <div class="message_box hidden">
+            <div class="content">
+                You've brought one more smile to this world, don't stop
+            </div>
+        </div>
+        <div class="text">
+            <a id="createMoreKudosModalButton" class="kudo_btn">
+                Send another kudo
+            </a>
+        </div>
+        <div class="tell_about_us_box">
+            <div class="content kudo_share_icons">
+                Help your friends to be thankful
+                <div class="social_share_block">
+                    <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fkudobox.co%2F&text=I%27ve%20just%20made%20this%20world%20brighter.%20Join%20me%20and%20spread%20the%20love%20%7B%3A-%29&related=kudobox&hashtags=kudobox"
+                       class="twitter_link social_share"></a>
+                    <a href="https://www.facebook.com/dialog/feed?app_id=373893949423522&display=popup&caption=An%20easy and fun way to say 'Thank you' to your friend, colleague or any other person you want to appreciate&link=http://kudobox.co&redirect_uri=http://kudobox.co&picture=http://kudobox.co/kudobox.png"
+                       class="facebook_link social_share"></a>
+                    <a href="https://plus.google.com/share?url=http://kudobox.co"
+                       class="googlePlus_link social_share"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--About section-->
+
+
 </body>
 </html>
