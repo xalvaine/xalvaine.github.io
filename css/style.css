@@ -120,6 +120,7 @@ body {
     height: 4px;
     position: absolute;
     bottom: -2px;
+    left: 0;
 }
 
 .header__link {
@@ -216,6 +217,7 @@ body {
     letter-spacing: 0.05em;
     font-weight: normal;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .message__fonts {
@@ -300,7 +302,7 @@ body {
 .footer__title {
     font-weight: normal;
     letter-spacing: 0.05em;
-    padding-top: 100px;
+    padding-top: 50px;
     margin-bottom: 20px;
 }
 
@@ -335,6 +337,7 @@ body {
 }
 
 .footer__bottom-content {
+    padding-top: 50px;
     margin-top: auto;
     display: -ms-grid;
     display: grid;
@@ -353,4 +356,60 @@ body {
 
 .modal {
     display: none;
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 25px;
+    }
+
+    .container {
+        padding: 0 calc((100% - 720px) / 2);
+    }
+
+    .header__navigation {
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        height: 60px;
+        letter-spacing: 0.05em;
+    }
+
+    .header__navigation::after {
+        background-color: transparent;
+        height: 12px;
+        bottom: -6px;
+    }
+
+    .intro {
+        background-size: 720px;
+        background-position: 50% 60%;
+    }
+
+    .intro__title {
+        padding-top: 100px;
+        font-size: 75px;
+    }
+
+    .selection__title {
+        padding-top: 100px;
+        margin-bottom: 25px;
+    }
+
+    .message__title {
+        padding-top: 100px;
+        margin-bottom: 25px;
+    }
+
+    .message__fonts {
+        margin-bottom: 25px;
+    }
+
+    .footer__bottom-content {
+        grid-auto-flow: column;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: end;
+        padding-top: 50px;
+    }
 }
