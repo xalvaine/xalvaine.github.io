@@ -55,7 +55,8 @@
 
 a {
     color: var(--light);
-    text-decoration: underline dashed;
+    -webkit-text-decoration: underline dashed;
+            text-decoration: underline dashed;
 }
 
 html {
@@ -78,9 +79,15 @@ body {
 
 .header {
     padding-top: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .header__navigation {
@@ -89,11 +96,18 @@ body {
     position: fixed;
     width: 100%;
     text-align: center;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     height: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding-bottom: 2px;
     z-index: 1;
 }
@@ -118,7 +132,9 @@ body {
 .intro {
     font-family: 'Outage', sans-serif;
     position: relative;
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     background: url("../img/intro_box.png") 50% 50% no-repeat var(--green);
     background-size: contain;
 }
@@ -138,8 +154,12 @@ body {
     position: absolute;
     bottom: 50px;
     height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0 20px;
     background: var(--darkGreen);
     color: var(--light);
@@ -148,6 +168,8 @@ body {
     margin: auto;
     left: 0;
     right: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -164,10 +186,13 @@ body {
 }
 
 .selection__cards {
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, 215px);
     justify-items: center;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
     padding-bottom: 15px;
 }
@@ -196,9 +221,14 @@ body {
 }
 
 .message__fonts {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
@@ -208,9 +238,15 @@ body {
     font-size: 30px;
     width: 172px;
     height: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .message__link:hover {
@@ -235,11 +271,17 @@ body {
     text-decoration: none;
     bottom: 50px;
     height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0 20px;
     border-radius: 25px;
     margin: 0 auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -248,8 +290,13 @@ body {
 .footer {
     background: var(--gray);
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .footer__title {
@@ -275,11 +322,16 @@ body {
 }
 
 .footer__text {
+    display: -ms-grid;
     display: grid;
     grid-auto-flow: column;
     grid-gap: 10px;
-    justify-content: start;
-    align-items: start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
     letter-spacing: 0.05em;
     margin-bottom: 10px;
 }
@@ -287,8 +339,12 @@ body {
 .footer__bottom-content {
     padding-top: 50px;
     margin-top: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .footer__graphic-link-image {
@@ -308,7 +364,8 @@ body {
     z-index: 1040;
     -webkit-overflow-scrolling: touch;
     outline: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .fade {
@@ -350,25 +407,26 @@ body {
 .modal.in .modal-dialog {
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
     transform: translate(0, 0);
 }
 
 .modal.fade .modal-dialog {
     -webkit-transform: translate(0, -25%);
     -ms-transform: translate(0, -25%);
-    -o-transform: translate(0, -25%);
     transform: translate(0, -25%);
     -webkit-transition: -webkit-transform 0.3s ease-out;
-    -moz-transition: -moz-transform 0.3s ease-out;
     -o-transition: -o-transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
+    -o-transition: transform 0.3s ease-out;
     transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 
 .kudo_popup {
     background-color: #FF7881;
     background-size: 100% 100%;
-    border-image: url('../img/border.png') 30 40 39 39 round round;
+    -o-border-image: url('../img/border.png') 30 40 39 39 round round;
+       border-image: url('../img/border.png') 30 40 39 39 round round;
     border-style: solid;
     border-width: 30px 40px 39px 39px;
     color: #FFFFFF;
@@ -396,7 +454,9 @@ body {
     }
 
     .header__navigation {
-        justify-content: flex-end;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
         height: 60px;
         letter-spacing: 0.05em;
     }
@@ -433,7 +493,9 @@ body {
 
     .footer__bottom-content {
         grid-auto-flow: column;
-        align-items: end;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: end;
         padding-top: 50px;
     }
 
