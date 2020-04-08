@@ -88,6 +88,7 @@ body {
             flex-direction: column;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    background: url("../img/bg_white.png") var(--green) 50% 50%;
 }
 
 .header__navigation {
@@ -130,12 +131,11 @@ body {
 }
 
 .intro {
-    font-family: 'Outage', sans-serif;
     position: relative;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    background: url("../img/intro_box.png") 50% 50% no-repeat var(--green);
+    background: url("../img/intro_box.png") 50% 50% no-repeat;
     background-size: contain;
 }
 
@@ -144,6 +144,7 @@ body {
     text-align: center;
     padding-top: 50px;
     margin-bottom: 20px;
+    font-family: 'Outage', sans-serif;
 }
 
 .intro__text {
@@ -160,7 +161,6 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 0 20px;
     background: var(--darkGreen);
     color: var(--light);
     text-decoration: none;
@@ -171,6 +171,8 @@ body {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    text-transform: uppercase;
+    padding: 0 40px;
 }
 
 .selection {
@@ -277,14 +279,14 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 0 20px;
     border-radius: 25px;
     margin: 0 auto;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    text-transform: uppercase;
     letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0 40px;
 }
 
 .footer {
@@ -321,6 +323,13 @@ body {
     background-position: -28px -90px;
 }
 
+.footer__feedback {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 10px;
+    margin-bottom: 50px;
+}
+
 .footer__text {
     display: -ms-grid;
     display: grid;
@@ -333,11 +342,9 @@ body {
         -ms-flex-align: start;
             align-items: start;
     letter-spacing: 0.05em;
-    margin-bottom: 10px;
 }
 
 .footer__bottom-content {
-    padding-top: 50px;
     margin-top: auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -469,11 +476,11 @@ body {
 
     .intro {
         background-size: 720px;
-        background-position: 50% 60%;
+        background-position: 50% 70%;
     }
 
     .intro__title {
-        padding-top: 100px;
+        padding-top: 50px;
         font-size: 75px;
     }
 
@@ -491,12 +498,22 @@ body {
         margin-bottom: 25px;
     }
 
+    .footer__title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .footer__feedback {
+        grid-auto-flow: column;
+        -ms-grid-rows: 1fr 10px 1fr 10px 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
     .footer__bottom-content {
         grid-auto-flow: column;
         -webkit-box-align: end;
             -ms-flex-align: end;
                 align-items: end;
-        padding-top: 50px;
     }
 
     .modal-dialog {
