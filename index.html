@@ -16,6 +16,7 @@
     <meta content="authenticity_token" name="csrf-param"/>
     <meta content="vmIQBOWY3SUyILkpjCuFJiHUB8Gl7kcYOgsZf/8inZ4=" name="csrf-token"/>
     <link rel="stylesheet" href="css/style.css">
+    <script data-turbolinks-track="true" src="js/application.js"></script>
 </head>
 <body>
 <header class="header full-screen-height">
@@ -29,7 +30,7 @@
     <section class="intro container">
         <h1 class="intro__title">Kudobox</h1>
         <p class="intro__text">is an easy way to share your thanks</p>
-        <a class="intro__button" href="#create" data-slide-target="kudo_choose_card">Create kudo</a>
+        <a class="intro__button" href="#" data-slide-target="kudo_choose_card">Create kudo</a>
     </section>
 </header>
 <main>
@@ -67,7 +68,10 @@
             <a href="#" data-font-id="6" class="message__link message__link--handyboldcyr">Kudobox</a>
         </div>
 
-        <div id="kudo_img_builder">
+
+
+        <div id="kudo_img_builder" class="message__canvas-container">
+            <img src="img/cards/big/1.png" class="message__canvas">
             <div class="kudo_preloader">
                 <div class="rect1"></div>
                 <div class="rect2"></div>
