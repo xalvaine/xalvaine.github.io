@@ -75,6 +75,8 @@ body {
 
 .full-screen-height {
     min-height: 100vh;
+    background: url("../img/bg_white.png") 50% 50% no-repeat;
+    background-size: 120% auto;
 }
 
 .header {
@@ -88,7 +90,7 @@ body {
             flex-direction: column;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    background: url("../img/bg_white.png") black 50% 50% no-repeat;
+    background-color: var(--green);
 }
 
 .header__navigation {
@@ -181,7 +183,7 @@ body {
 }
 
 .selection {
-    background: var(--skyBlue);
+    background-color: var(--skyBlue);
 }
 
 .selection__title {
@@ -216,8 +218,14 @@ body {
 }
 
 .message {
-    background: var(--turquoise);
-    padding-bottom: 25px;
+    background-color: var(--turquoise);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .message__title {
@@ -273,6 +281,23 @@ body {
     font-family: 'handyboldcyr', 'Arial', sans-serif;
 }
 
+.message__canvas-container {
+    max-width: 660px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 25px;
+}
+
+.message__canvas {
+    width: 100%;
+    height: auto;
+}
+
 .message__button {
     background: var(--orange);
     color: var(--light);
@@ -286,7 +311,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
     border-radius: 25px;
-    margin: 0 auto;
+    margin: 0 auto 25px;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -296,7 +321,7 @@ body {
 }
 
 .footer {
-    background: var(--gray);
+    background-color: var(--gray);
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -464,6 +489,10 @@ body {
 
     .container {
         padding: 0 calc((100% - 720px) / 2);
+    }
+
+    .header {
+        background-position: 50% 50%;
     }
 
     .header__navigation {
