@@ -217,6 +217,7 @@ body {
 
 .message {
     background: var(--turquoise);
+    padding-bottom: 25px;
 }
 
 .message__title {
