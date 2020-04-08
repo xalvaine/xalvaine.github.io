@@ -88,7 +88,7 @@ body {
             flex-direction: column;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    background: url("../img/bg_white.png") var(--green) 50% 50%;
+    background: url("../img/bg_white.png") black 50% 50% no-repeat;
 }
 
 .header__navigation {
