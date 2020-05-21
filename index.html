@@ -1,200 +1,412 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
-    <link rel="apple-touch-icon" href="http://kudobox.co/iphone_icon.png"/>
-    <title>Kudobox</title>
-    <meta name="title" content="Kudobox"/>
-    <meta name="description"
-          content="An easy and fun way to share your appreciations and emotions with friends and colleagues"/>
-    <meta property="og:title" content="Kudobox"/>
-    <meta property="og:description"
-          content="An easy and fun way to share your appreciations and emotions with friends and colleagues"/>
-    <meta property="og:image" content="http://kudobox.co/kudobox.png"/>
-    <meta content="authenticity_token" name="csrf-param"/>
-    <meta content="vmIQBOWY3SUyILkpjCuFJiHUB8Gl7kcYOgsZf/8inZ4=" name="csrf-token"/>
-    <link rel="stylesheet" href="css/style.css">
-    <script data-turbolinks-track="true" src="js/application.js"></script>
+    <meta charset="UTF-8">
+    <title>ALIBITA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Alibita. Онлайн Обмен криптовалют">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-<header class="header full-screen-height">
-    <nav class="header__navigation container">
-        <ul>
-            <li>
-                <a href="#" class="header__link">Login with twitter</a>
-            </li>
-        </ul>
-    </nav>
-    <section class="intro container">
-        <h1 class="intro__title">Kudobox</h1>
-        <p class="intro__text">is an easy way to share your thanks</p>
-        <a class="intro__button" href="#" data-slide-target="kudo_choose_card">Create kudo</a>
-    </section>
-</header>
-<main>
-    <section id="create" class="selection full-screen-height container">
-        <h2 class="selection__title">Choose a card to begin with</h2>
-        <div class="selection__cards">
-            <a href="#" data-image-id="1">
-                <img alt="Choose a card" src="img/cards/small/1.jpg" title="Choose a card" class="selection__image"/>
-            </a>
-            <a href="#" data-image-id="2">
-                <img alt="Choose a card" src="img/cards/small/2.jpg" title="Choose a card" class="selection__image"/>
-            </a>
-            <a href="#" data-image-id="3">
-                <img alt="Choose a card" src="img/cards/small/3.jpg" title="Choose a card" class="selection__image"/>
-            </a>
-            <a href="#" data-image-id="4">
-                <img alt="Choose a card" src="img/cards/small/4.jpg" title="Choose a card" class="selection__image"/>
-            </a>
-            <a href="#" data-image-id="5">
-                <img alt="Choose a card" src="img/cards/small/5.jpg" title="Choose a card" class="selection__image"/>
-            </a>
-            <a href="#" data-image-id="6">
-                <img alt="Choose a card" src="img/cards/small/6.jpg" title="Choose a card" class="selection__image"/>
-            </a>
-            <a href="#" data-image-id="7">
-                <img alt="Choose a card" src="img/cards/small/7.jpg" title="Choose a card" class="selection__image"/>
+<header class="page-header page-header--promo">
+    <h1 class="visually-hidden">Alibita. Онлайн Обмен криптовалют</h1>
+    <div class="container">
+        <div class="page-header__logo">
+            <a class="page-header__link" href="#">
+                Alibita
             </a>
         </div>
-    </section>
-    <section class="message container full-screen-height">
-        <h2 class="message__title">Type your thanks message</h2>
-        <div class="message__fonts">
-            <a href="#" data-font-id="4" class="message__link message__link--festus">Kudobox</a>
-            <a href="#" data-font-id="5" class="message__link message__link--marckscript">Kudobox</a>
-            <a href="#" data-font-id="6" class="message__link message__link--handyboldcyr">Kudobox</a>
-        </div>
-
-
-
-        <div id="kudo_img_builder" class="message__canvas-container">
-            <img src="img/cards/big/1.png" class="message__canvas">
-            <div class="kudo_preloader">
-                <div class="rect1"></div>
-                <div class="rect2"></div>
-                <div class="rect3"></div>
-                <div class="rect4"></div>
-                <div class="rect5"></div>
-            </div>
-        </div>
-        <a id="sendButton" href="#" class="message__button">Share my kudo</a>
-    </section>
-</main>
-<footer class="footer container">
-    <h2 class="footer__title">Explore Kudobox</h2>
-    <div class="footer__feedback">
-        <p class="footer__text">
-            Follow us on:
-            <a class="footer__link footer__link--twitter" href="http://twitter.com/kudobox" target="_blank"></a>
-            <a class="footer__link footer__link--facebook" href="#" target="_blank"></a>
-        </p>
-        <p class="footer__text">
-            Email us at
-            <a class="" href="mailto:skotlov@gmail.com">skotlov@gmail.com</a>
-        </p>
-        <p class="footer__text">
-            Our
-            <a href="api">API</a>
-        </p>
-        <p class="footer__text">
-            Our
-            <a href="about/privacy">privacy policy</a>
-        </p>
+        <h2 class="page-header__title">Онлайн Обмен криптовалют </h2>
+        <p class="page-header__slogan">Быстро, безопастно <br class="page-header__br"> и на отличных условиях.</p>
     </div>
-    <div class="footer__bottom-content container">
-        <a class="footer__graphic-link" href="http://happymelly.com" target="_blank" title="Happy Melly">
-            <img class="footer__graphic-link-image" src="img/logo.png" alt="">
-        </a>
+</header>
+<main class="page-main">
+    <div class="container">
+        <section class="interaction">
+            <div class="interaction__wrapper">
+                <button class="interaction__button interaction__button--highlighted interaction__button--first" id="btc-to-qiwi">
+                    BTC<span class="interaction__arrow"></span>Qiwi
+                </button>
+                <button class="interaction__button" id="btc-to-card">
+                    BTC<span class="interaction__arrow"></span>Visa/Mastercard
+                </button>
+                <button class="interaction__button interaction__button--last interaction__button--third" id="qiwi-to-btc">
+                    Qiwi<span class="interaction__arrow"></span>BTC
+                </button>
+                <form class="interaction__form form">
+                    <div class="form__wrapper">
+                        <div class="form__section form__section--swappable">
+                            <h4 class="form__title">Отдаете</h4>
+                            <div class="form__paired">
+                                <label class="form__select-label form__select-label--first form__select-label--bitcoin">
+                                    Валюта
+                                    <input type="text" value="Bitcoin" id="send" class="form__select" readonly>
+                                </label>
+                                <label class="form__quantity-label">
+                                    Количество
+                                    <input class="form__quantity form__quantity--first" type="number"
+                                           name="currency-quantity"
+                                           placeholder="1.388" min="0" step="0.001" pattern="\d+([\.,]\d{2})?"
+                                           onchange="check_first(value)">
+                                </label>
+                            </div>
+                            <div class="form__range-wrapper">
+                                <p class="form__range form__range--first">
+                                    min 0.001 BTC / max 1 BTC
+                                </p>
+                            </div>
+                        </div>
+                        <span class="form__swap"></span>
+                        <div class="form__section form__section--second form__section--swappable">
+                            <h4 class="form__title">Получаете</h4>
+                            <div class="form__paired">
+                                <label class="form__select-label form__select-label--second form__select-label--qiwi">
+                                    Кошелёк
+                                    <input type="text" class="form__select" id="get" value="Qiwi" readonly>
+                                </label>
+                                <label class="form__quantity-label">
+                                    Количество
+                                    <input class="form__quantity form__quantity--second" type="number"
+                                           name="wallet-profit"
+                                           placeholder="711494,77" min="0" step="0.01" pattern="\d+([\.,]\d{2})?"
+                                           onchange="check_second(value)">
+                                </label>
+                            </div>
+                            <div class="form__range-wrapper">
+                                <p class="form__range form__range--second">
+                                    min 8000 RUB / max 99000 RUB
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__wrapper form__wrapper--right visually-hidden" id="btc-address">
+                        <div class="form__section">
+                            <h4 class="form__title">Адрес BTC-кошелька</h4>
+                            <label class="form__label">
+                                Адрес BTC-кошелька
+                                <input class="form__phone" type="text" placeholder="1BQ9qza7fn9snSCyJQB3ZcN46biBtkt4ee"
+                                       name="btc-address">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form__wrapper form__wrapper--right visually-hidden" id="card-number">
+                        <div class="form__section">
+                            <h4 class="form__title">Номер карты</h4>
+                            <label class="form__label">
+                                Номер карты
+                                <input class="form__phone" type="text" placeholder="4276123456789123"
+                                       name="card-number">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form__wrapper">
+                        <div class="form__section">
+                            <h4 class="form__title">Ваш номер Qiwi</h4>
+                            <label class="form__label">
+                                Телефон
+                                <input class="form__phone" type="tel" placeholder="+79101234567" name="phone">
+                            </label>
+                        </div>
+                        <div class="form__section">
+                            <h4 class="form__title">Ваш e-mail</h4>
+                            <label class="form__label">
+                                Электронная почта
+                                <input class="form__email" type="email" placeholder="username@gmail.com" name="email">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form__wrapper">
+                        <input type="submit" value="Продолжить" class="form__submit" id="to_attention">
+                    </div>
+                </form>
+            </div>
+            <span class="comment">Нажимая обменять вы соглашаетесь c
+                <a href="#" class="comment__link">правилами сервиса</a>
+            </span>
+        </section>
+        <section class="features">
+            <div class="features__item">
+                <h3 class="features__title">Как оплатить?</h3>
+                <p class="features__text">
+                    Пополните свой Qiwi - кошелек любым удобным способом, а с него делайте перевод на наш QIWI счет,
+                    который будет выдан после создания заказа.
+                </p>
+            </div>
+            <div class="features__item">
+                <h3 class="features__title">Быстро?</h3>
+                <p class="features__text">
+                    Биткоины будут отправлены автоматически в течение минуты сразу после поступления платежа.
+                </p>
+            </div>
+            <div class="features__item">
+                <h3 class="features__title">Безопасно?</h3>
+                <p class="features__text">
+                    Alibita не разглашает информацию о клиентах и не шлет спам.
+                </p>
+            </div>
+        </section>
+        <section class="numbers">
+            <h3 class="numbers__title">Курсы и условия сделки</h3>
+            <div class="numbers__wrapper">
+                <div class="numbers__item">
+                    <span class="numbers__heading">+ 0,5%</span>
+                    <span class="numbers__comment">комиссия <b>на продажу</b></span>
+                </div>
+                <div class="numbers__item">
+                    <span class="numbers__heading">+ 2,5%</span>
+                    <span class="numbers__comment">комиссия <b>на покупку</b></span>
+                </div>
+            </div>
+        </section>
+        <aside class="numbers numbers--no_border">
+            <div class="numbers__wrapper numbers__wrapper--populated">
+                <div class="numbers__item numbers__item--big_margin">
+                    <span class="numbers__heading">$ 5 287,15</span>
+                    <span class="numbers__comment">курс <b>Bitcoin</b></span>
+                </div>
+                <div class="numbers__item numbers__item--big_margin">
+                    <span class="numbers__heading">$ 170,18</span>
+                    <span class="numbers__comment">курс <b>Ethereum</b></span>
+                </div>
+                <div class="numbers__item numbers__item--big_margin">
+                    <span class="numbers__heading">$ 76,05</span>
+                    <span class="numbers__comment">курс <b>Litecoin</b></span>
+                </div>
+                <div class="numbers__item">
+                    <span class="numbers__heading numbers__heading--small">$ 1 = 63,96 ₽</span>
+                    <span class="numbers__comment">текущий курс по ЦБ</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+</main>
+<footer class="page-footer">
+    <div class="container">
+        <div class="feedback">
+            <p class="feedback__company ">ALIBITA — онлайн обмен <br class="feedback_br">криптовалют. © 2019</p>
+        </div>
     </div>
 </footer>
-<div class="modal fade" id="copyModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog kudo_popup">
-        <div class="copy_link_box">
-            <input onclick="this.focus(); this.select();" class="copy-link hidden" type="text" value=""/>
-            <div class="kudo_preloader">
-                <div class="rect1"></div>
-                <div class="rect2"></div>
-                <div class="rect3"></div>
-                <div class="rect4"></div>
-                <div class="rect5"></div>
-            </div>
-        </div>
-        <div class="text">
-            <a class="kudo_btn">Done</a>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog kudo_popup">
-        <div class="content">
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="shareModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog kudo_popup">
-        <div class="notification">
-            Copy a link or share your kudo on twitter from here:
-        </div>
-        <div class="content_popup">
-            <div class="textarea_box">
-                <textarea data-initial-message="My #kudo to " maxlength="90">My #kudo to </textarea>
-                <span class="counter"><i></i> symbols left</span>
-            </div>
-            <div class="text">
-                <!-- <a id="loginModalButton" class="kudo_btn pull-center" style="width: 57%;">Login with twitter to share</a> -->
-                <a class="kudo_btn copy-form" id="shareFromCopyLink" href="#">Copy a link</a>
-            </div>
-        </div>
-        <div class="failed_content hidden"></div>
-    </div>
-</div>
-<div class="modal fade" id="successfulShareModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog kudo_popup">
-        <div class="copy_link_box hidden">
-            <input onclick="this.focus(); this.select();" class="copy-link hidden" type="text" value=""/>
-            <div class="kudo_preloader">
-                <div class="rect1"></div>
-                <div class="rect2"></div>
-                <div class="rect3"></div>
-                <div class="rect4"></div>
-                <div class="rect5"></div>
-            </div>
-        </div>
-        <div class="message_box hidden">
-            <div class="content">
-                You've brought one more smile to this world, don't stop
-            </div>
-        </div>
-        <div class="text">
-            <a id="createMoreKudosModalButton" class="kudo_btn">
-                Send another kudo
-            </a>
-        </div>
-        <div class="tell_about_us_box">
-            <div class="content kudo_share_icons">
-                Help your friends to be thankful
-                <div class="social_share_block">
-                    <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fkudobox.co%2F&text=I%27ve%20just%20made%20this%20world%20brighter.%20Join%20me%20and%20spread%20the%20love%20%7B%3A-%29&related=kudobox&hashtags=kudobox"
-                       class="twitter_link social_share"></a>
-                    <a href="https://www.facebook.com/dialog/feed?app_id=373893949423522&display=popup&caption=An%20easy and fun way to say 'Thank you' to your friend, colleague or any other person you want to appreciate&link=http://kudobox.co&redirect_uri=http://kudobox.co&picture=http://kudobox.co/kudobox.png"
-                       class="facebook_link social_share"></a>
-                    <a href="https://plus.google.com/share?url=http://kudobox.co"
-                       class="googlePlus_link social_share"></a>
+<section class="popup visually-hidden" id="exchange">
+    <div class="popup__wrapper">
+        <div class="popup__die">
+            <div class="popup__container">
+                <h3 class="popup__title">Обмен Qiwi - BTC</h3>
+                <div class="popup__info">
+                    <h4 class="popup__name">Статус</h4>
+                    <p class="popup__details">Ожидание платежа</p>
+                </div>
+                <div class="popup__info">
+                    <h4 class="popup__name">Вы переводите</h4>
+                    <p class="popup__details"><b>71 466 руб</b></p>
+                </div>
+                <div class="popup__info">
+                    <h4 class="popup__name">Переводите с QIWI</h4>
+                    <p class="popup__details"><b>+79101234567</b></p>
+                </div>
+                <div class="popup__info">
+                    <h4 class="popup__name">Вы получаете</h4>
+                    <p class="popup__details"><b>0.133 BTC</b></p>
+                </div>
+                <div class="popup__info">
+                    <h4 class="popup__name">Вы получаете</h4>
+                    <p class="popup__details popup__details--small">1BQ9qza7fn9snSCyJQB3ZcN46biBtkt4ee</p>
+                </div>
+                <div class="popup__buttons-wrapper">
+                    <button class="btn btn--highlighted" id="exchange_to_attention">Оплатить через Qiwi</button>
+                    <button class="btn" id="exchange_to_how-to">Как оплатить</button>
+                    <button class="btn" id="exchange_to_cancel">Отмена</button>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<script>
-    f = () => document.querySelector(`.full-screen-height`).style.minHeight = `${window.innerHeight}px`;
-    f();
-    document.addEventListener(`load`, f);
-    window.addEventListener(`resize`, f);
-</script>
+</section>
+<section class="popup visually-hidden" id="success">
+    <div class="popup__wrapper">
+        <div class="popup__die">
+            <div class="popup__container">
+                <h3 class="popup__title">Обмен Qiwi - BTC</h3>
+                <div class="popup__info">
+                    <h4 class="popup__name">Статус</h4>
+                    <p class="popup__details popup__success">Заказ оплачен</p>
+                </div>
+                <div class="popup__info">
+                    <h4 class="popup__name">Вы переводите</h4>
+                    <p class="popup__details"><b>71 466 руб</b></p>
+                </div>
+                <div class="popup__info">
+                    <h4 class="popup__name">Переводите с QIWI</h4>
+                    <p class="popup__details"><b>+79101234567</b></p>
+                </div>
+                <div class="popup__info">
+                    <h4 class="popup__name">Вы получаете</h4>
+                    <p class="popup__details"><b>0.133 BTC</b></p>
+                </div>
+                <div class="popup__info">
+                    <h4 class="popup__name">Вы получаете</h4>
+                    <p class="popup__details popup__details--small">1BQ9qza7fn9snSCyJQB3ZcN46biBtkt4ee</p>
+                </div>
+                <div class="elements__swapper">
+                    <img src="img/vector/qr-code.svg" width="174" height="174" alt="" class="elements__qr">
+                    <button class="btn elements__copy">Скопировать адрес</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="popup visually-hidden" id="attention">
+    <div class="popup__wrapper">
+        <div class="popup__die">
+            <div class="popup__container">
+                <h3 class="popup__title popup__title--small_margin">Внимание!</h3>
+                <div class="card-to-crypto visually-hidden">
+                    <p class="popup__text">
+                        <span class="popup__exclamation">!</span>
+                        Для совершения обмена нужна <b>регистрация</b> и <b>верификация</b> карты на нашем сайте.
+                    </p>
+                    <p class="popup__text">
+                        <span class="popup__exclamation">!</span>
+                        После регистрации зайдите в свой личный кабинет и верифицируйте номер свой карты в разделе «Ваши
+                        счета».
+                    </p>
+                    <p class="popup__text">
+                        <span class="popup__exclamation">!</span>
+                        Данная операция производится в автоматическом режиме и занимает около <b>5 минут после
+                        оплаты.</b>
+                    </p>
+                    <p class="popup__text">
+                        <span class="popup__exclamation">!</span>
+                        Также обращаем ваше внимание, что мы принимаем оплату на карту <b>QIWI</b> Банк.
+                    </p>
+                    <p class="popup__text">
+                        <span class="popup__exclamation">!</span>
+                        Ни в коем случае <b>НЕ оплачивайте</b> заявку <b>2-мя</b> платежами, иначе система не увидит
+                        оплату и ваша оплата не пройдет.
+                    </p>
+                    <p class="popup__text">
+                        <span class="popup__exclamation">!</span>
+                        Запрещается оплачивать заявку переводом <b>ниже</b> минимальной суммы <b>5000 руб,</b> в
+                        противном случае заявка будет аннулирована и оплаченные средства не возвращаются!
+                    </p>
+                </div>
+                <div class="qiwi-to-crypto visually-hidden">
+                    <p class="popup__text">
+                        <span class="popup__exclamation">!</span>
+                        Данная операция производится в автоматическом режиме <b>24/7</b> и занимает <b>5 минут</b> после
+                        оплаты.
+                    </p>
+                    <p class="popup__text">
+                        <span class="popup__exclamation">!</span>
+                        Ни в коем случае <b>НЕ оплачивайте</b> заявку <b>2-мя</b> платежами, иначе система не увидит
+                        оплату и ваша оплата не пройдет.
+                    </p>
+                    <p class="popup__text">
+                        <span class="popup__exclamation">!</span>
+                        Запрещается оплачивать заявку переводом <b>ниже</b> минимальной суммы <b>5000 руб,</b> в
+                        противном случае заявка будет аннулирована и оплаченные средства не возвращаются!
+                    </p>
+                    <p class="popup__text">
+                        <span class="popup__exclamation">!</span>
+                        Если ваш кошелек <b>QIWI</b> имеет ограничение на вывод не больше <b>15 000</b> рублей за один
+                        раз, просто создайте 2 заявки на нужные суммы.
+                    </p>
+                    <p class="popup__text">
+                        <span class="popup__exclamation">!</span>
+                        Обязательно <b>проверяйте,</b> чтобы в комментарии к переводу стоял <b>номер заявки.</b> Иначе
+                        наша система <b>не распознает оплату.</b>
+                    </p>
+                    <p class="popup__text">
+                        <span class="popup__exclamation">!</span>
+                        Перед тем как введете адрес биткоин кошелька, обязательно проверяйте нет ли в нем <b>ошибок.</b>
+                    </p>
+                </div>
+                <div class="crypto-to-card visually-hidden">
+                    <p class="popup__text">
+                        <span class="popup__exclamation">!</span>
+                        Операция производится в автоматическом режиме и занимает до <b>10-15 мин</b> после получения <b>1
+                        подтверждения транзакции,</b> выплата происходит в часы работы оператора с <b>10:00-00:00</b> по
+                        МСК, в остальное время в свободном режиме.
+                    </p>
+                    <p class="popup__text">
+                        <span class="popup__exclamation">!</span>
+                        Настоятельно рекомендуем, с целью ускорения прохождения транзакции увеличьте комиссию в системе
+                        Bitcoin! Ставьте комиссию <b>в 2 раза</b> больше рекомендованной, иначе ваш перевод может
+                        «зависнуть» на неопределенное время.
+                    </p>
+                    <p class="popup__text">
+                        <b>Отправка денег на карты происходит с QIWI Банк (АО).</b>
+                    </p>
+                </div>
+                <div class="crypto-to-qiwi">
+                    <p class="popup__text">
+                        <span class="popup__exclamation">!</span>
+                        Данная операция производится в автоматическом режиме и занимает до <b>10-15 мин</b> после
+                        получения <b>1 подтверждения транзакции,</b> выплата происходит в часы работы оператора с <b>10:00-00:00</b>
+                        по МСК, в остальное время в свободном режиме.
+                    </p>
+                    <p class="popup__text">
+                        <span class="popup__exclamation">!</span>
+                        С целью ускорения прохождения транзакции увеличьте комиссию в системе Bitcoin!
+                    </p>
+                    <p class="popup__text">
+                        Отслеживать подтверждения можно на сайте
+                        <a class="popup__text-link" href="https://blockchain.com"
+                           target="_blank">https://blockchain.com</a>,
+                        просто вбив в строку поиска адрес bitcoin кошелька, на который вы отправляли средства.
+                    </p>
+                    <p class="popup__text">
+                        <span class="popup__exclamation">!</span>
+                        Обмен на кошельки НЕ Российского региона, взимается дополнительная <b>комиссия 1%.</b>
+                    </p>
+                    <p class="popup__text">
+                        <span class="popup__exclamation">!</span>
+                        Перед тем как создавать заявку, пожалуйста, убедитесь, что ваш кошелек не имеет ограничения на
+                        прием <b>QIWI.</b> Кошелек без идентификации может принять не больше <b>15 000 руб.</b> Чтобы
+                        повысить лимит на прием, нужно сделать идентификацию кошелька <b>QIWI.</b> За более подробной
+                        информацией обращайтесь в техническую поддержку <b>QIWI.</b>
+                    </p>
+                </div>
+                <button class="btn popup__continue" id="attention_to_success">Продолжить</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="popup visually-hidden" id="how-to">
+    <div class="popup__wrapper">
+        <div class="popup__die">
+            <div class="popup__container">
+                <h3 class="popup__title popup__title--small_margin">Как оплатить?</h3>
+                <p class="popup__text">
+                    <b>Шаг 1.</b>
+                    Нажмите на кнопку Оплатить через QIWI, войдите в свой кошелек +79151363771 . Оплата ожидается с
+                    вашего номера.
+                </p>
+                <p class="popup__text">
+                    <b>Шаг 2.</b>
+                    При переводе не указывайте комментарий.
+                </p>
+                <p class="popup__text">
+                    <b>Шаг 3.</b>
+                    Оставайтесь на этой странице. После перевода в течение миинуты она обновится.
+                </p>
+                <button class="btn popup__continue" id="how-to_to_exchange">Вернуться назад</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="popup visually-hidden" id="cancel">
+    <div class="popup__wrapper">
+        <div class="popup__die">
+            <div class="popup__container">
+                <h3 class="popup__title popup__title--cancel">Вы уверены, что хотите<br>отменить заявку?</h3>
+                <div class="popup__cancel-wrapper">
+                    <button class="btn popup__choice" id="cancel_close">Да</button>
+                    <button class="btn popup__choice" id="cancel_to_exchange">Нет</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="js/script.min.js" async></script>
 </body>
 </html>
