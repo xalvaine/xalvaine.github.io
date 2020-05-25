@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.feature {
+  height: -moz-available;          /* WebKit игнор. */
+  height: -webkit-fill-available;  /* Mozilla игнор. */
+  height: fill-available;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
