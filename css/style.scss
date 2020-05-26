@@ -1,3 +1,5 @@
+@import "fonts";
+
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +23,7 @@ body {
 }
 
 .header {
-  position: fixed;
+  position: absolute;
   left: 0;
   padding: 16px;
   width: 100%;
@@ -29,7 +31,7 @@ body {
 }
 
 .feature {
-  height: 100vh;
+  min-height: 100vh;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -59,6 +61,13 @@ body {
 
   &--quote {
     background: $swamp;
+    padding-bottom: 0;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  &--quote-light {
+    background: linear-gradient(360deg, #EBEFF1 67.44%, rgba(235, 239, 241, 0) 100%);
   }
 
   &__highlighted--pink {
@@ -122,14 +131,209 @@ body {
 .quote {
   &__text {
     font-style: italic;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 28px;
     line-height: 142%;
     padding-left: 28px;
     margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+
+    &--light {
+      opacity: 0.9;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      background: url("../img/quotes.svg") no-repeat 50% 50%;
+      left: -8px;
+      top: -35px;
+      z-index: -1;
+    }
+
+    &--light::before {
+      background-image: url("../img/quotes-light.svg");
+    }
   }
 
   &__author {
     display: flex;
+    align-items: center;
+  }
+
+  &__image-wrapper {
+    flex-basis: 100px;
+    flex-shrink: 0;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 0 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    margin-right: 5px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #ccc095;
+    }
+
+    &--light::before {
+      background: white;
+    }
+  }
+
+  &__image {
+    z-index: 1;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 4px;
+  }
+
+  &__info {
+    line-height: 19px;
+  }
+}
+
+.brands {
+  padding-bottom: 70px;
+
+  &__title {
+    margin: 70px 0 24px;
+    text-align: center;
+  }
+
+  &__list-wrapper {
+    overflow-x: auto;
+  }
+
+  &__list {
+    display: inline-block;
+    height: 76px;
+  }
+}
+
+.more {
+  background: linear-gradient(360deg, #D4DDEB 11.78%, rgba(212, 221, 235, 0) 94.22%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 48px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    margin-bottom: 35px;
+  }
+
+  &__image {
+    margin-bottom: 12px;
+  }
+
+  &__item-title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #394575;
+    margin-bottom: 8px;
+  }
+}
+
+.stats {
+  &__list {
+    padding: 68px 0 30px;
+  }
+
+  &__item {
+    padding-left: 115px;
+    font-size: 20px;
+    line-height: 146%;
+    color: #394575;
+    list-style: none;
+    margin-bottom: 30px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 90px;
+      height: 75px;
+      background: no-repeat 50% 0;
+    }
+
+    &--events::before {
+      background-image: url("../img/stats-events.svg");
+    }
+
+    &--improvement::before {
+      background-image: url("../img/stats-improvement.svg");
+    }
+
+    &--attends::before {
+      background-image: url("../img/stats-attends.svg");
+    }
+  }
+
+  &__big-text {
+    font-size: 48px;
+    line-height: 57px;
+    display: block;
+  }
+}
+
+.footer {
+  padding-top: 65px;
+  padding-bottom: 65px;
+  text-align: center;
+  background: #FA5C7F;
+
+  &__text {
+    font-size: 32px;
+    line-height: 142%;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: $dark;
+    text-decoration: none;
+    padding: 21px 77px;
+    background: white;
+    border-radius: 6px;
+    margin: 0 auto;
+    width: fit-content;
   }
 }
