@@ -33,6 +33,7 @@ body {
   padding: 16px;
   width: 100%;
   box-sizing: border-box;
+  z-index: 2;
 }
 
 .feature {
@@ -43,25 +44,39 @@ body {
   justify-content: flex-end;
   align-items: flex-start;
   padding-bottom: 60px;
-  overflow-x: hidden;
 
   &--saving {
-    background: url("../img/mobile-saving-bg.jpg") no-repeat 100% 100% #EEF9FB;
-    background-size: contain;
     justify-content: center;
     padding-bottom: 10px;
+    position: relative;
+    background: #EEF9FB;
+    overflow: hidden;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      display: block;
+      z-index: -1;
+      position: absolute;
+      left: 0;
+      top: 135px;
+      width: 100%;
+      height: 100%;
+      background: url("../img/mobile-saving-bg.jpg") no-repeat 70% 100% #EEF9FB;
+      background-size: 250%;
+    }
   }
 
   &--up-to-date {
-    background: url("../img/up-to-date-bg.svg") no-repeat #e6f5dc;
+    background: url("../img/mobile-up-to-date.svg") no-repeat #e6f5dc;
   }
 
   &--email {
-    background: url("../img/email-bg.svg") no-repeat #e1e8f7;
+    background: url("../img/mobile-email-bg.svg") no-repeat #e1e8f7;
   }
 
   &--zapier {
-    background: url("../img/zapier.svg") no-repeat #ffe6da;
+    background: url("../img/mobile-zapier-bg.svg") no-repeat #ffe6da;
   }
 
   &--quote {
@@ -175,32 +190,32 @@ body {
     height: 100px;
     border-radius: 50%;
     overflow: hidden;
-    padding: 0 10px;
+    padding: 10px;
     box-sizing: border-box;
     display: flex;
     align-items: flex-end;
     justify-content: center;
     position: relative;
     margin-right: 5px;
+  }
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: 10px;
-      top: 10px;
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: #ccc095;
-    }
+  &__image-background {
+    border-radius: 50%;
+    background: #ccc095;
+    width: 100%;
+    height: 100%;
 
-    &--light::before {
-      background: white;
+    &--light {
+      background: #FFFFFF;
     }
   }
 
   &__image {
-    z-index: 1;
+    position: relative;
+    top: 10px;
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
   &__name {
@@ -261,6 +276,9 @@ body {
 
   &__image {
     margin-bottom: 12px;
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
   }
 
   &__item-title {
@@ -372,13 +390,43 @@ body {
 
   .feature {
     justify-content: center;
+    background: no-repeat 100%;
+
+    &--quote-light {
+      background: linear-gradient(360deg, #EBEFF1 67.44%, rgba(235, 239, 241, 0) 100%);
+    }
+
+    &--inverted {
+      align-items: flex-end;
+      background-position: 0;
+    }
+
+    &--saving {
+      background-image: url("../img/mobile-saving-bg.jpg");
+      background-size: cover;
+
+      &::before {
+        content: none;
+      }
+    }
+
+    &--up-to-date {
+      background-image: url("../img/up-to-date-bg.svg");
+      background-color: #e6f5dc;
+    }
+
+    &--email {
+      background-image: url("../img/email-bg.svg");
+      background-color: #e1e8f7;
+    }
+
+    &--zapier {
+      background-image: url("../img/zapier-bg.svg");
+      background-color: #ffe6da;
+    }
 
     &__content {
       width: 572px;
-
-      &--inverted {
-        align-self: flex-end;
-      }
     }
 
     &__title {
@@ -483,6 +531,11 @@ body {
     &__item-title {
       font-size: 32px;
       line-height: 39px;
+    }
+
+    &__image {
+      height: 80px;
+      width: 80px;
     }
   }
 
