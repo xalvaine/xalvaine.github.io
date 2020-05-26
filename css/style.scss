@@ -3,8 +3,17 @@
   padding: 0;
 }
 
+$dark: #27200E;
+$pink: #FA5C7F;
+$green: #90D927;
+$purple: #758CFF;
+$orange: #FF4A00;
+$swamp: #f0ece0;
+
 body {
   font-family: "Helvetica Neue", sans-serif;
+  color: $dark;
+  font-size: 16px;
 }
 
 .container {
@@ -20,10 +29,107 @@ body {
 }
 
 .feature {
-  height: -moz-available;          /* WebKit игнор. */
-  height: -webkit-fill-available;  /* Mozilla игнор. */
-  height: fill-available;
+  height: 100vh;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-bottom: 60px;
+  overflow-x: hidden;
+
+  &--saving {
+    background: url("../img/mobile-saving-bg.jpg") no-repeat 100% 100% #EEF9FB;
+    background-size: contain;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+
+  &--up-to-date {
+    background: url("../img/up-to-date-bg.svg") no-repeat #e6f5dc;
+  }
+
+  &--email {
+    background: url("../img/email-bg.svg") no-repeat #e1e8f7;
+  }
+
+  &--zapier {
+    background: url("../img/zapier.svg") no-repeat #ffe6da;
+  }
+
+  &--quote {
+    background: $swamp;
+  }
+
+  &__highlighted--pink {
+    color: $pink;
+  }
+
+  &__highlighted--green {
+    color: $green;
+  }
+
+  &__highlighted--purple {
+    color: $purple;
+  }
+
+  &__highlighted--orange {
+    color: $orange;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 120%;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    line-height: 142%;
+    margin-bottom: 24px;
+
+    &--abbreviated {
+      width: 73%;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: -100px;
+        bottom: 20px;
+        background: url("../img/clock.svg") no-repeat;
+        background-size: contain;
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    width: fit-content;
+    padding: 16px 32px;
+    border: 2px solid $dark;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: none;
+    color: $dark;
+  }
+}
+
+.quote {
+  &__text {
+    font-style: italic;
+    font-weight: 200;
+    font-size: 28px;
+    line-height: 142%;
+    padding-left: 28px;
+    margin-bottom: 24px;
+  }
+
+  &__author {
+    display: flex;
+  }
 }
