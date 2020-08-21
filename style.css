@@ -1,0 +1,152 @@
+@keyframes UIButtonPress {
+  from {
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
+    5px 5px 12px rgba(166, 180, 200, 0.7),
+    inset 0 0 0 rgba(255, 255, 255, 0.8),
+    inset 0 0 0 rgba(166, 180, 200, 0.7);
+    font-size: 130px;
+  }
+
+  50% {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.8),
+    0 0 0 rgba(166, 180, 200, 0.7),
+    inset 0 0 0 rgba(255, 255, 255, 0.8),
+    inset 0 0 0 rgba(166, 180, 200, 0.7);
+    font-size: 128px;
+  }
+
+  to {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.8),
+    0 0 0 rgba(166, 180, 200, 0.7),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.8),
+    inset 6px 6px 10px rgba(166, 180, 200, 0.7);
+    font-size: 126px;
+  }
+}
+
+@keyframes UIButtonRelease {
+  from {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.8),
+    0 0 0 rgba(166, 180, 200, 0.7),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.8),
+    inset 6px 6px 10px rgba(166, 180, 200, 0.7);
+    font-size: 126px;
+  }
+
+  50% {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.8),
+    0 0 0 rgba(166, 180, 200, 0.7),
+    inset 0 0 0 rgba(255, 255, 255, 0.8),
+    inset 0 0 0 rgba(166, 180, 200, 0.7);
+    font-size: 128px;
+  }
+
+  to {
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
+    5px 5px 12px rgba(166, 180, 200, 0.7),
+    inset 0 0 0 rgba(255, 255, 255, 0.8),
+    inset 0 0 0 rgba(166, 180, 200, 0.7);
+    font-size: 130px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  transition: .3s;
+}
+
+body {
+  font-family: 'KoHo', sans-serif;
+  background: #EEF0F5;
+  display: flex;
+  height: 100vh;
+  padding: 150px;
+  min-width: 1086px;
+  box-sizing: border-box;
+}
+
+.content {
+  width: 1086px;
+  height: 786px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content > * {
+  flex: 0 0 auto;
+}
+
+.ui {
+  font-weight: bold;
+  font-size: 130px;
+  color: #EC7EDA;
+  border: none;
+  background: linear-gradient(134.17deg, #EEF0F5 4.98%, #E6E9EF 94.88%);
+  border-radius: 40px;
+  width: 210px;
+  height: 210px;
+  outline: none;
+  margin-right: 115px;
+  box-shadow: -12px -12px 20px rgba(255, 255, 255, 0.8),
+  10px 10px 24px rgba(166, 180, 200, 0.7),
+  inset 0 0 0 rgba(255, 255, 255, 0.8),
+  inset 0 0 0 rgba(166, 180, 200, 0.7);
+}
+
+.ui:not(:active) {
+  animation: .1s linear UIButtonRelease;
+}
+
+.ui:active {
+  animation: .1s linear forwards UIButtonPress;
+}
+
+.radios {
+  display: flex;
+  flex-direction: column;
+}
+
+.radios input {
+  display: none;
+}
+
+.radios label:first-of-type {
+  margin: 17px 0 50px;
+}
+
+.radios label {
+  background: linear-gradient(44.73deg, #EEF1F5 11.32%, #E6E9EF 92.96%);
+  box-shadow: inset -4px -4px 9px rgba(255, 255, 255, 0.7), inset 4px 4px 5px rgba(166, 180, 200, 0.7);
+  border-radius: 40px;
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.radios label::before {
+  content: "";
+  background: linear-gradient(134.17deg, #FEFEFF 4.98%, #C6CEDA 94.88%);
+  box-shadow: inset -4px -4px 9px rgba(255, 255, 255, 0.2), inset 4px 4px 5px rgba(166, 180, 200, 0.1);
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  left: 15px;
+  top: 15px;
+  position: absolute;
+  z-index: 1;
+}
+
+.radios label::after {
+  content: "";
+  background: linear-gradient(134.17deg, #EEF1F5 4.98%, #E6E9EF 94.88%);
+  box-shadow: inset -4px -4px 9px rgba(255, 255, 255, 0.2), inset 4px 4px 5px rgba(166, 180, 200, 0.1);
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  left: 19px;
+  top: 19px;
+  position: absolute;
+  z-index: 1;
+}
