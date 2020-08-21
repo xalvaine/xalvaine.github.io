@@ -96,11 +96,11 @@ body {
 }
 
 .ui:not(:active) {
-  animation: .1s linear UIButtonRelease;
+  animation: .3s linear UIButtonRelease;
 }
 
 .ui:active {
-  animation: .1s linear forwards UIButtonPress;
+  animation: .3s linear forwards UIButtonPress;
 }
 
 .radios {
